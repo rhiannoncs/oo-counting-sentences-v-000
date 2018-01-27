@@ -16,6 +16,7 @@ class String
 
   def count_sentences
     self.split(/(!+|\?+|\.+)/)
-    self.
+    self.delete_if {|string| string =~ /(!+|\?+|\.+)/}
+    self.count
   end
 end
